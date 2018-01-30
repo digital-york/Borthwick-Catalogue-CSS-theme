@@ -10,6 +10,7 @@ This plugin has been test with AtoM 2.4. To use, down the clone the repo to */us
 
 To see the changes, type
 
+    cd ../..
     php symfony cc
     systemctl restart php7.0-fpm.service
 
