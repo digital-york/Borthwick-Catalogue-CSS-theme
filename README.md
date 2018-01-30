@@ -14,3 +14,5 @@ To see the changes, type
     systemctl restart php7.0-fpm.service
 
 Then go into the web interface's admin settings > Themes and choose the arBorthwickPlugin theme
+
+Theme is deployed through Puppet so the above CLI commands are only really relevant for testing purposes.
