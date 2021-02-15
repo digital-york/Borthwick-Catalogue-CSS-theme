@@ -1,5 +1,5 @@
 # Borthwick-Catalogue-CSS-theme
-A lightly-customised CSS theme for the UoY Borthwick Catalogue, based on the default *arDominion* theme provided with AtoM (Access to Memory). This plugin has been tested with AtoM 2.4. 
+A lightly-customised CSS theme for the UoY Borthwick Catalogue, based on the default *arDominion* theme provided with AtoM (Access to Memory). This plugin has been tested with AtoM 2.4 and 2.6. 
 
 Usage instructions:
 
@@ -14,7 +14,7 @@ To see any recent changes you may have made, you may need to type the following:
 
     cd ../..
     php symfony cc
-    systemctl restart php7.0-fpm.service
+    systemctl restart php7.2-fpm
 
 The *arBorthwickPlugin* theme should be selectable from the web interface's admin Settings > Themes.
 
