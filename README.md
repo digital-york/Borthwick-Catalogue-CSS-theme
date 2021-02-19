@@ -19,3 +19,5 @@ To see any recent changes you may have made, you may need to type the following:
 The *arBorthwickPlugin* theme should be selectable from the web interface's admin Settings > Themes.
 
 The theme is deployed through Puppet so the above CLI commands are only really relevant when testing or making changes to the theme.
+
+Note that this theme — as per the *arDominion* theme — is incompatible with less >= 2.0. Please use less 1.x. Further information on themming can be found at https://www.accesstomemory.org/en/docs/2.6/admin-manual/customization/theming/
