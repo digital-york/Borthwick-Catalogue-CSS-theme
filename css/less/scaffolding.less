@@ -354,6 +354,10 @@ table.sticky-header thead th {
   border-left: 1px solid #ddd;
 }
 
+table.repos-table {
+  margin-top: 20px;
+}
+
 // Fix magin bottom for tables under content div
 
 div#content > table.table {
@@ -786,7 +790,14 @@ div#content > table.table {
   .box-shadow(0 1px 1px rgba(0, 0, 0, .2));
 
   // Section title
-  h2 {
+  > h2,
+  > div > h2,
+  .section > h2,
+  .section > a > h2,
+  .section > span > h2,
+  section > h2,
+  section > a > h2,
+  section > span > h2 {
     font-size: @baseFontSize * 1.10;
     line-height: 38px;
     color: @orange;
@@ -1192,6 +1203,7 @@ section .vcard:last-child > .field:last-child > div {
   .creation-details {
     color: @grayLight;
     font-size: @baseFontSize * 0.90;
+    margin-top: 10px;
   }
 
   // List of details
@@ -1245,6 +1257,112 @@ section .vcard:last-child > .field:last-child > div {
     text-align: left;
   }
 
+  .mediaelement-player {
+    margin: 0 auto;
+  }
+}
+
+// Digital object bulk title update page results
+
+.thumbnail-container {
+  left: 0;
+  right: 0;
+  height: 250px;
+  width: 250px;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+// Digital object metadata
+
+#content {
+
+  fieldset.digital-object-metadata {
+
+    legend {
+      padding-left: 30%;
+      position: relative;
+
+      > a {
+        display: block;
+        position: relative;
+        &:after {
+          content: "»";
+          position: absolute;
+          margin-left: 4px;
+          top: -1px;
+          font-size: @baseFontSize * 1.75;
+          color: @grayLight;
+          transition-property: right;
+          transition-duration: 200ms;
+        }
+      }
+    }
+
+    .fieldset-wrapper {
+      padding: 0;
+    }
+
+    .digital-object-metadata-header {
+      float: left;
+      width: 28%;
+      text-align: right;
+
+      h3 {
+        margin: 0;
+        line-height: 20px;
+        padding: 2px 0;
+        position: relative;
+
+        .fa {
+          position: absolute;
+          top: 24px;
+          right: 0;
+          color: #000;
+          font-size: 1.5em;
+        }
+
+        .fa.inactive {
+          color: #999;
+        }
+      }
+    }
+
+    .digital-object-metadata-body {
+      margin-left: 30%;
+      margin-bottom: 10px;
+      border-left: 1px solid #f2f2f2;
+
+      .field {
+
+        > h3 {
+          float: none;
+          width: auto;
+          padding: 2px 4px;
+          margin: 0;
+          text-align: left;
+          border-right: none;
+          display: inline-block;
+        }
+
+        > div {
+          margin: 0;
+          padding: 2px 4px;
+          display: inline-block;
+
+          p {
+            margin: 0;
+          }
+        }
+
+      }
+
+    }
+
+  }
 }
 
 // Horizontal space that takes the sort dropdown or a search bar in a browser
@@ -1260,6 +1378,10 @@ section .vcard:last-child > .field:last-child > div {
   display: inline-block;
   width: 100%;
   line-height: 30px;
+
+  .btn-group {
+    vertical-align: top;
+  }
 
   > a {
     padding-right: 10px;
@@ -1324,6 +1446,10 @@ section .vcard:last-child > .field:last-child > div {
 
 .sort-options {
   line-height: 30px;
+}
+
+.pickers {
+  float: right;
 }
 
 #sort-header {
@@ -1550,6 +1676,34 @@ body.login #content {
   }
 }
 
+// Export clipboard page
+
+#export-options {
+  .panel {
+    padding: 15px 15px 10px 15px;
+    margin-bottom: 0;
+    .generic-help-box {
+      position: relative;
+      width: auto;
+      float: right;
+      z-index: 1;
+    }
+    label {
+      display: inline-block;
+      margin-left: -6px;
+      padding: 3px 6px;
+      transition: color .25s, background-color .25s, border-color .25s, border-width .25s, padding .25s;
+      border-radius: @baseBorderRadius;
+    }
+    .muted {
+      background-color: @graySilver;
+    }
+    .alert p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
 @media (max-width: 767px) {
   #update-check {
     margin-left: -20px;
@@ -1585,6 +1739,24 @@ body.login #content {
 
   #privacy-message > .alert > button {
     position: relative;
+  }
+}
+
+// Storage Service AIP and object download links
+
+.aip-download {
+  > a {
+    padding-left: 5px;
+
+    i {
+      font-size: 15px;
+      padding-right: 3px;
+      color: @grayLight;
+    }
+
+    &:hover > i {
+      color: @orange;
+    }
   }
 }
 
@@ -1709,6 +1881,10 @@ body.login #content {
       margin-bottom: 10px;
       a {
         display: block;
+        margin-right: 0;
+      }
+      button {
+        width: 100%;
       }
     }
   }
@@ -1752,6 +1928,12 @@ body.login #content {
     width: 100%;
     top: none;
   }
+}
+
+// User profile
+
+#editing-history-wrapper {
+  border-top: 1px solid #e5e5e5;
 }
 
 // Settings » Permissions
@@ -1868,4 +2050,16 @@ body.login #content {
   &+ .multiline-header {
     margin-top: 45px;
   }
+}
+
+// Maintain font size in blockquotes
+
+blockquote p {
+  font-size: inherit;
+}
+
+// Remove last paragraph margin in alerts
+
+div.alert > p:last-child {
+  margin-bottom: 0;
 }

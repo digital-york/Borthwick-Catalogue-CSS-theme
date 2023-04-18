@@ -21,6 +21,14 @@
 #top-bar {
   height: 50px;
   background-color: @topBarBackgroundColor;
+
+  // Hack to always wrap the header content
+  // without disrupting themes extending this one.
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
 }
 
 header #logo {
