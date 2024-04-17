@@ -7,7 +7,10 @@ Customize variables:
 - Import B5 functions, variables and mixins if needed.
 
 */
-
+$orange: #ff5000;
+$link-color: $orange;
+$list-group-color: $orange;
+$list-group-action-color: $orange;
 @import "../../arDominionB5Plugin/scss/main.scss";
 
 /*
