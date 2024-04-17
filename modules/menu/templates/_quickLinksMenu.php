@@ -16,7 +16,7 @@
     </i>
     <span class="d-lg-none mx-1" aria-hidden="true">
       <?php echo __('Help pages'); ?>
-    </span> 
+    </span>
     <span class="visually-hidden">
       <?php echo __('Help pages'); ?>
     </span>
@@ -37,7 +37,7 @@
           <?php echo link_to(
               $child->getLabel(['cultureFallback' => true]),
               $child->getPath(['getUrl' => true, 'resolveAlias' => true]),
-              ['class' => 'dropdown-item']
+              ['class' => 'dropdown-item', 'target' => '_blank']
           ); ?>
         </li>
       <?php } ?>
