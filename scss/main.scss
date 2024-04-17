@@ -1,0 +1,95 @@
+/*
+
+Customize variables:
+
+- Check the ../../arDominionB5Plugin/scss/variables.scss file.
+- Check the B5 documentation (https://getbootstrap.com/docs/5.0/customize/sass/).
+- Import B5 functions, variables and mixins if needed.
+
+*/
+
+@import "../../arDominionB5Plugin/scss/main.scss";
+
+/*
+
+Extend:
+
+- Add extra SCSS and CSS imports.
+- Add custom styles directly.
+
+*/
+
+#top-bar {
+  background-color: #535e64 !important;
+}
+
+footer {
+  min-height: 40px;
+  padding-top: 10px;
+}
+
+#footer-hr {
+  margin: 0 auto;
+  width: 1170px;
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+  margin-bottom: 20px;
+}
+
+#footer-content-wrapper {
+  display: table;
+  margin: 0 auto;
+  width: 1170px;
+  padding: 10px 0px;
+}
+
+.footer-content {
+  display: table-cell;
+  width: 33.3%;
+}
+
+#site-slogan {
+  background-color: #a7b3ba !important;
+  height: 24px;
+  color: black !important;
+  div {
+    padding: 0 !important;
+  }
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  span {
+    line-height: 24px;
+  }
+  a {
+   color: #000;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+#orange-link-box {
+  background-color: #ff5000;
+  border-bottom: 1px #FFF solid
+}
+
+#orange-link-box > div {
+  line-height: 24px;
+  a {
+    color: #000;
+    font-weight: bold;
+  }
+}
+
+@media (min-width: 1200px) {
+  #orange-link-box > div {
+      width: 1170px;
+      margin: 0 auto;
+   }
+}
+
+.actions {
+  background-color: #535e64 !important;
+}
