@@ -36,16 +36,15 @@ class DefaultPopularComponent extends sfComponent
       $rows = QubitPdo::fetchAll($sql, array(QubitInformationObject::ROOT_ID, QubitTerm::PUBLICATION_STATUS_DRAFT_ID,
                                  QubitInformationObject::ROOT_ID));
       return array_map(function($x) { return $x->id; }, $rows);
-
     }
+
     public function execute($request)
     {
-        $this->popularThisWeek = QubitAccessLog::getPopularThisWeek(
-            ['limit' => isset($this->limit) ? $this->limit : 10]
-        );
+      $this->newestAdditions = $this->getNewestAdditions();
 
-        if (0 == count($this->popularThisWeek)) {
-            return sfView::NONE;
-        }
+      if (0 == count($this->newestAdditions))
+      {
+        return sfView::NONE;
+      }
     }
 }
