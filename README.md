@@ -16,3 +16,7 @@ npm install
 npm run build
 php symfony cc
 ```
+
+### Repository visibility
+
+This GitHub repository is intentionally public, so that the theme can be automatically downloaded and deployed without the additional complexities associated with access to private repositories.
