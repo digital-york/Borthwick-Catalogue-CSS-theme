@@ -23,3 +23,7 @@ The theme is deployed through Puppet so the above CLI commands are only really r
 Note that this theme — as per the *arDominion* theme — is incompatible with less >= 2.0. Please use less 1.x. Further information on Theming can be found at https://www.accesstomemory.org/en/docs/2.7/admin-manual/customization/theming/
 
 Note also that the [atom-york](https://github.com/Jimadine/atom-york/tree/stable/2.7.x/plugins) repo embeds this theme as a `git submodule`. When changes to the theme are pushed upstream, the `atom-york` repo can get these changes by running `git submodule update --remote` from the root of the `atom-york` repo. You'll then notice when you run `git status` that `git` has tracked the change to the submodule git commit ref. You'll want to then commit this change.
+
+### Repository visibility
+
+This GitHub repository is intentionally public, so that the theme can be automatically downloaded and deployed without the additional complexities associated with access to private repositories.
